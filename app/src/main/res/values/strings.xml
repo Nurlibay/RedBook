@@ -14,4 +14,9 @@
     <string name="animal_uzb_name">Animal Uzb Name</string>
     <string name="animal_rus_name">Animal Rus Name</string>
     <string name="animal_eng_name">Animal Eng Name</string>
+    <string name="menu_invertebrates">Omirtqasizlar</string>
+    <string name="menu_fishes">Baliqlar</string>
+    <string name="menu_birds">Quslar</string>
+    <string name="menu_mammals">Sutemiziwshiler</string>
+    <string name="menu_reptiles">Jerbawirlawshilar</string>
 </resources>

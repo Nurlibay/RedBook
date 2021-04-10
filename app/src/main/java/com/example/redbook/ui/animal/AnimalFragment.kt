@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.redbook.R
 import com.example.redbook.data.dao.AnimalDao
 import com.example.redbook.data.database.RedBookDatabase
+import com.example.redbook.ui.MainActivity
 import kotlinx.android.synthetic.main.animal_fragment.*
 
 class AnimalFragment : Fragment(R.layout.animal_fragment) {
@@ -18,12 +19,13 @@ class AnimalFragment : Fragment(R.layout.animal_fragment) {
         super.onViewCreated(view, savedInstanceState)
         recyclerView.adapter = myAdapter
         recyclerView.addItemDecoration(DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL))
+        val type = arguments?.getInt(MainActivity.TYPE_ID) ?: 1
         dao = RedBookDatabase.getInstance(requireContext()).dao()
-        setData()
+        setData(type)
     }
 
-    private fun setData(){
-        myAdapter.models = dao.getAllAnimals()
+    private fun setData(type: Int){
+        myAdapter.models = dao.getAllAnimals(type)
     }
 
 }
