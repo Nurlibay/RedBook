@@ -1,5 +1,6 @@
 package com.example.redbook.ui.animal
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -8,11 +9,12 @@ import com.example.redbook.R
 import com.example.redbook.data.dao.AnimalDao
 import com.example.redbook.data.database.RedBookDatabase
 import com.example.redbook.ui.MainActivity
+import com.example.redbook.ui.detail.DetailActivity
 import kotlinx.android.synthetic.main.animal_fragment.*
 
-class AnimalFragment : Fragment(R.layout.animal_fragment) {
+class AnimalFragment : Fragment(R.layout.animal_fragment), AnimalItemClickListener {
 
-    private val myAdapter = AnimalListAdapter()
+    private val myAdapter = AnimalListAdapter(this)
     private lateinit var dao: AnimalDao
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -26,6 +28,12 @@ class AnimalFragment : Fragment(R.layout.animal_fragment) {
 
     private fun setData(type: Int){
         myAdapter.models = dao.getAllAnimals(type)
+    }
+
+    override fun onAnimalItemClick(id: Int) {
+        val mIntent = Intent(requireActivity(), DetailActivity::class.java)
+        mIntent.putExtra(DetailActivity.ANIMAL_ID, id)
+        startActivity(mIntent)
     }
 
 }
