@@ -3,14 +3,12 @@ package com.example.redbook.ui.detail
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.room.Dao
 import com.bumptech.glide.Glide
 import com.example.redbook.R
 import com.example.redbook.data.dao.AnimalDao
 import com.example.redbook.data.database.RedBookDatabase
 import com.example.redbook.data.model.Animal
 import kotlinx.android.synthetic.main.activity_detail.*
-import kotlinx.android.synthetic.main.item_animal.view.*
 
 class DetailActivity : AppCompatActivity() {
 
