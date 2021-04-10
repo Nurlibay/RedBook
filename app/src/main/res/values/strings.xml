@@ -19,4 +19,12 @@
     <string name="menu_birds">Quslar</string>
     <string name="menu_mammals">Sutemiziwshiler</string>
     <string name="menu_reptiles">Jerbawirlawshilar</string>
+    <string name="status">Status</string>
+    <string name="propagation">Propagation</string>
+    <string name="habitat">Habitat</string>
+    <string name="quantity">Quantity</string>
+    <string name="lifestyle">LifeStyle</string>
+    <string name="limiting_factors">Limiting Factors</string>
+    <string name="breeding">Breeding</string>
+    <string name="security">Security</string>
 </resources>

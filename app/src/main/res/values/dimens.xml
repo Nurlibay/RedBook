@@ -8,4 +8,5 @@
     <dimen name="margin_standard">16dp</dimen>
     <dimen name="text_standard_size">16sp</dimen>
     <dimen name="text_caption_size">12sp</dimen>
+    <dimen name="margin_small">8dp</dimen>
 </resources>

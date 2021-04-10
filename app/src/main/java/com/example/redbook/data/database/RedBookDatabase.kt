@@ -19,7 +19,7 @@ abstract class RedBookDatabase: RoomDatabase() {
                 "book-database.db"
             )
                 .createFromAsset("book-database.db")
-                    .allowMainThreadQueries()
+                .allowMainThreadQueries()
                 .build()
     }
 
