@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RedBook">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.RedBook.NoActionBar">
             <intent-filter>

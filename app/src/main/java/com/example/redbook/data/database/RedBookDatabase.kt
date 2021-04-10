@@ -1,4 +1,4 @@
-package com.example.redbook.data
+package com.example.redbook.data.database
 
 import android.content.Context
 import androidx.room.Database
@@ -19,6 +19,7 @@ abstract class RedBookDatabase: RoomDatabase() {
                 "book-database.db"
             )
                 .createFromAsset("book-database.db")
+                    .allowMainThreadQueries()
                 .build()
     }
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawableStart="@drawable/icon_search"
+        android:inputType="text"
+        android:background="@drawable/search_background"
+        android:padding="8dp"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:hint="@string/search"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
