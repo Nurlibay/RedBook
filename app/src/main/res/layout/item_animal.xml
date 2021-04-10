@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivAnimal"
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvUzbName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/ivAnimal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/margin_standard"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/animal_uzb_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_standard_size"
+        />
+
+    <TextView
+        android:id="@+id/tvRusName"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toEndOf="@id/ivAnimal"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvUzbName"
+        android:text="@string/animal_rus_name"
+        android:textSize="@dimen/text_caption_size"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tvEngName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/ivAnimal"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvRusName"
+        android:text="@string/animal_eng_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_caption_size"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
