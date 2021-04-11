@@ -2,6 +2,7 @@ package com.example.redbook.ui.detail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import com.bumptech.glide.Glide
 import com.example.redbook.R
@@ -19,6 +20,7 @@ class DetailActivity : AppCompatActivity() {
     private var animalId: Int = 0
     private lateinit var currentAnimal: Animal
     private lateinit var dao : AnimalDao
+    private  var menuItem: MenuItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,10 +51,36 @@ class DetailActivity : AppCompatActivity() {
 
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_book_mark, menu)
+        menuItem = menu?.findItem(R.id.not_marked)
+        setFavoriteIcon()
+        return true
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             android.R.id.home -> finish()
+            R.id.not_marked -> {
+                setFavorite()
+            }
         }
         return super.onOptionsItemSelected(item)
     }
+
+    private fun setFavorite() {
+        if(currentAnimal.isFavorite == null) currentAnimal.isFavorite = 1
+        else currentAnimal.isFavorite = 1 - currentAnimal.isFavorite!!
+        setFavoriteIcon()
+        dao.updateAnimal(currentAnimal)
+    }
+
+    private fun setFavoriteIcon(){
+        if(currentAnimal.isFavorite == 1){
+            menuItem?.setIcon(R.drawable.icon_marked)
+        } else {
+            menuItem?.setIcon(R.drawable.icon_not_bookmarked )
+        }
+    }
+
 }
