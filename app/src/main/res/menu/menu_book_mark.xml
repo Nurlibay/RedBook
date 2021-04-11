@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/not_marked"
+        android:icon="@drawable/icon_not_bookmarked"
+        android:title="bookmark"
+        app:showAsAction="always"
+        tools:ignore="HardcodedText" />
+
+</menu>
